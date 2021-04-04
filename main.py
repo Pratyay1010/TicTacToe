@@ -44,6 +44,7 @@ while True:
                 flag=0
                 break
         if(flag==1):
+            print("h")
             print(board[i][0]," Wins")
             win=1
             break
@@ -61,6 +62,7 @@ while True:
                 flag=0
                 break
         if(flag==1):
+            print("v")
             print(board[0][i]," Wins")
             win=1
             break
@@ -73,16 +75,18 @@ while True:
     for i in range(1,3):
         if(board[0][0]==board[i][i] and board[0][0]!=' '):
             flag=1
-        elif(board[0][2]==board[0+i][2-i] and board[0][2]!=' '):
+        if(board[0][2]==board[0+i][2-i] and board[0][2]!=' '):
             flag=2
         else:
             flag=0
             break
     if(flag==1):
+        print("d1")
         print(board[0][0]," Wins")
         win=1
         break
     elif(flag==2):
+        print("d2")
         print(board[0][2]," Wins")
         win=1
         break
